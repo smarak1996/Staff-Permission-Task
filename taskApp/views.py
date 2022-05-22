@@ -9,7 +9,7 @@ from .serializers import RegisterSerializer, TaskSerailizer, UserTypeSerializer
 from django.contrib.auth.models import User
 from rest_framework.response import Response
 
-from taskApp import serializers
+#from taskApp import serializers
 
 
 class RegisterAPIView(ListCreateAPIView):
@@ -54,9 +54,3 @@ class TaskListApiView(ListCreateAPIView):
         )
         task.save()
         return task
-
-
-# def post(self, request, *args, **kwargs):
-#     serializer = self.get_serializer(data=request.data)
-#     serializer.is_valid(raise_exception=True)
-#     user = serializer.save()
